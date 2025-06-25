@@ -26,7 +26,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold text-gray-800 hover:text-green-700 transition-colors">
-              🏠 Countryside Barns
+             🚜 Caia Farm Barns
             </a>
           </div>
 

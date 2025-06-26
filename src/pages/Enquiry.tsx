@@ -76,11 +76,11 @@ const Enquiry = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-green-50">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Header */}
-      <section className="bg-gradient-to-r from-green-600 to-red-600 text-white py-16 px-4">
+      <section className="text-white py-16 px-4" style={{ backgroundColor: '#80d19d' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl mb-6">
@@ -98,10 +98,10 @@ const Enquiry = () => {
             
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="border-green-200">
+              <Card className="border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-green-800">Enquiry Form</CardTitle>
-                  <CardDescription className="text-green-600">
+                  <CardTitle className="text-2xl text-black">Enquiry Form</CardTitle>
+                  <CardDescription className="text-gray-600">
                     Tell us about your requirements - don't worry, we're good listeners (even better than cows)!
                   </CardDescription>
                 </CardHeader>
@@ -111,54 +111,54 @@ const Enquiry = () => {
                     {/* Personal Information */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name" className="text-green-800">Full Name *</Label>
+                        <Label htmlFor="name" className="text-black">Full Name *</Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                           placeholder="Your name"
-                          className="border-green-200 focus:border-green-400"
+                          className="border-gray-200 focus:border-gray-400"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email" className="text-green-800">Email Address *</Label>
+                        <Label htmlFor="email" className="text-black">Email Address *</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                           placeholder="your.email@example.com"
-                          className="border-green-200 focus:border-green-400"
+                          className="border-gray-200 focus:border-gray-400"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone" className="text-green-800">Phone Number</Label>
+                        <Label htmlFor="phone" className="text-black">Phone Number</Label>
                         <Input
                           id="phone"
                           value={formData.phone}
                           onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                           placeholder="01234 567890"
-                          className="border-green-200 focus:border-green-400"
+                          className="border-gray-200 focus:border-gray-400"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="company" className="text-green-800">Company Name</Label>
+                        <Label htmlFor="company" className="text-black">Company Name</Label>
                         <Input
                           id="company"
                           value={formData.company}
                           onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
                           placeholder="Your company (optional)"
-                          className="border-green-200 focus:border-green-400"
+                          className="border-gray-200 focus:border-gray-400"
                         />
                       </div>
                     </div>
 
                     {/* Unit Interest */}
                     <div>
-                      <Label className="text-green-800 mb-3 block">Which units interest you?</Label>
+                      <Label className="text-black mb-3 block">Which units interest you?</Label>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {units.map((unit) => (
                           <div key={unit.id} className="flex items-center space-x-2">
@@ -171,7 +171,7 @@ const Enquiry = () => {
                             />
                             <Label 
                               htmlFor={`unit-${unit.id}`} 
-                              className="text-green-700 text-sm cursor-pointer"
+                              className="text-gray-700 text-sm cursor-pointer"
                             >
                               {unit.name}
                             </Label>
@@ -183,12 +183,12 @@ const Enquiry = () => {
                     {/* Business Details */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="intendedUse" className="text-green-800">Intended Use</Label>
+                        <Label htmlFor="intendedUse" className="text-black">Intended Use</Label>
                         <Select 
                           value={formData.intendedUse} 
                           onValueChange={(value) => setFormData(prev => ({ ...prev, intendedUse: value }))}
                         >
-                          <SelectTrigger className="border-green-200">
+                          <SelectTrigger className="border-gray-200">
                             <SelectValue placeholder="Select primary use" />
                           </SelectTrigger>
                           <SelectContent>
@@ -201,41 +201,42 @@ const Enquiry = () => {
                         </Select>
                       </div>
                       <div>
-                        <Label htmlFor="moveInDate" className="text-green-800">Preferred Move-in Date</Label>
+                        <Label htmlFor="moveInDate" className="text-black">Preferred Move-in Date</Label>
                         <Input
                           id="moveInDate"
                           type="date"
                           value={formData.moveInDate}
                           onChange={(e) => setFormData(prev => ({ ...prev, moveInDate: e.target.value }))}
                           min="2025-10-01"
-                          className="border-green-200 focus:border-green-400"
+                          className="border-gray-200 focus:border-gray-400"
                         />
                       </div>
                     </div>
 
                     {/* Message */}
                     <div>
-                      <Label htmlFor="message" className="text-green-800">Your Message *</Label>
+                      <Label htmlFor="message" className="text-black">Your Message *</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
                         onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                         placeholder="Tell us about your requirements, any specific questions, or just say hello! We love a good chat."
                         rows={5}
-                        className="border-green-200 focus:border-green-400"
+                        className="border-gray-200 focus:border-gray-400"
                       />
                     </div>
 
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-red-600 hover:bg-red-700"
+                      className="w-full text-white hover:opacity-90"
+                      style={{ backgroundColor: '#ff4040' }}
                     >
                       <Send className="mr-2 h-5 w-5" />
                       Send Enquiry
                     </Button>
                     
-                    <p className="text-sm text-green-600 text-center">
+                    <p className="text-sm text-gray-600 text-center">
                       * Required fields - we promise we're not as picky as a cow choosing grass!
                     </p>
                   </form>
@@ -247,49 +248,49 @@ const Enquiry = () => {
             <div className="space-y-6">
               
               {/* Contact Details */}
-              <Card className="border-green-200">
+              <Card className="border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-green-800">Contact Information</CardTitle>
-                  <CardDescription className="text-green-600">
+                  <CardTitle className="text-black">Contact Information</CardTitle>
+                  <CardDescription className="text-gray-600">
                     Other ways to reach us
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-red-600" />
+                    <Phone className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-green-800">Phone</p>
-                      <p className="text-green-600">Give us a call for a friendly chat</p>
+                      <p className="font-medium text-black">Phone</p>
+                      <p className="text-gray-600">Give us a call for a friendly chat</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-red-600" />
+                    <Mail className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-green-800">Email</p>
-                      <p className="text-green-600">Drop us a line anytime</p>
+                      <p className="font-medium text-black">Email</p>
+                      <p className="text-gray-600">Drop us a line anytime</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="h-5 w-5 text-red-600" />
+                    <MapPin className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-green-800">Location</p>
-                      <p className="text-green-600">Beautiful countryside setting</p>
+                      <p className="font-medium text-black">Location</p>
+                      <p className="text-gray-600">Beautiful countryside setting</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Response Time */}
-              <Card className="border-green-200">
+              <Card className="border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-green-800">Response Time</CardTitle>
+                  <CardTitle className="text-black">Response Time</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center space-x-3 mb-3">
-                    <Calendar className="h-5 w-5 text-red-600" />
-                    <span className="font-medium text-green-800">Within 24 hours</span>
+                    <Calendar className="h-5 w-5" style={{ color: '#ff4040' }} />
+                    <span className="font-medium text-black">Within 24 hours</span>
                   </div>
-                  <p className="text-green-600">
+                  <p className="text-gray-600">
                     We aim to respond to all enquiries within one working day. 
                     If you don't hear from us, check your spam folder - 
                     sometimes our emails get as lost as sheep!
@@ -298,16 +299,16 @@ const Enquiry = () => {
               </Card>
 
               {/* Visit Information */}
-              <Card className="border-green-200">
+              <Card className="border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-green-800">Want to Visit?</CardTitle>
+                  <CardTitle className="text-black">Want to Visit?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center space-x-3 mb-3">
-                    <Building className="h-5 w-5 text-red-600" />
-                    <span className="font-medium text-green-800">Viewings Available</span>
+                    <Building className="h-5 w-5" style={{ color: '#ff4040' }} />
+                    <span className="font-medium text-black">Viewings Available</span>
                   </div>
-                  <p className="text-green-600">
+                  <p className="text-gray-600">
                     We'd love to show you around! Just mention in your enquiry 
                     that you'd like to arrange a viewing, and we'll sort out a time 
                     that works for everyone.

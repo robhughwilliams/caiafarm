@@ -1,5 +1,5 @@
 
-import { Building, Calendar, Users, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Building, Calendar, Users, Mail, Phone, MapPin, ArrowRight, Tractor, Leaf, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -26,48 +26,48 @@ const Index = () => {
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Premium Barn Rentals
+              Welcome to Caia Farm
             </h1>
             <h2 className="text-xl md:text-2xl font-semibold mb-4" style={{ color: '#80d19d' }}>
-              Six flexible units available October 2025
+              A working farm with diversified businesses
             </h2>
             <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Located in the heart of the countryside, our converted barn offers versatile spaces 
-              perfect for storage or office use. Each unit can be rented individually or combined 
-              to meet your specific requirements.
+              Located in the heart of the countryside, Caia Farm is home to three thriving businesses: 
+              premium barn rentals, specialized agricultural services, and sustainable farming operations. 
+              Discover how tradition meets innovation on our working farm.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="px-8 py-4 text-lg text-white font-semibold hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: '#80d19d' }}
-                onClick={() => document.getElementById('units')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('businesses')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View Available Units
+                Explore Our Businesses
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
-                onClick={() => window.location.href = '/enquiry'}
+                onClick={() => window.location.href = '/about'}
               >
-                Make Enquiry
+                Our Farm History
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
+      {/* Farm Overview */}
       <section className="py-16 px-4" style={{ backgroundColor: '#b1d3ef' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#507e37' }}>
-              Why Choose Our Barn?
+              A Working Farm with Purpose
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#5f6360' }}>
-              Flexible, professional spaces in a beautiful countryside setting
+              Caia Farm combines traditional farming values with modern business innovation
             </p>
           </div>
           
@@ -75,13 +75,13 @@ const Index = () => {
             <Card className="text-center border-0 shadow-md bg-white">
               <CardHeader className="pb-4">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
-                  <Calendar className="h-8 w-8 text-white" />
+                  <Tractor className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Available October 2025</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Active Farming</CardTitle>
               </CardHeader>
               <CardContent>
                 <p style={{ color: '#5f6360' }}>
-                  Perfect timing for your business expansion or storage needs
+                  Our farm continues its agricultural heritage with modern sustainable practices
                 </p>
               </CardContent>
             </Card>
@@ -91,11 +91,11 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
                   <Building className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl" style={{ color: '#507e37' }}>6 Flexible Units</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Business Diversification</CardTitle>
               </CardHeader>
               <CardContent>
                 <p style={{ color: '#5f6360' }}>
-                  Rent individually, in sections, or take the entire barn space
+                  Three distinct businesses operating from our farm infrastructure
                 </p>
               </CardContent>
             </Card>
@@ -103,13 +103,13 @@ const Index = () => {
             <Card className="text-center border-0 shadow-md bg-white">
               <CardHeader className="pb-4">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
-                  <Users className="h-8 w-8 text-white" />
+                  <Leaf className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Storage & Offices</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Sustainable Future</CardTitle>
               </CardHeader>
               <CardContent>
                 <p style={{ color: '#5f6360' }}>
-                  Versatile spaces suitable for both commercial storage and office use
+                  Committed to environmental stewardship and rural community development
                 </p>
               </CardContent>
             </Card>
@@ -117,56 +117,136 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Units Overview */}
-      <section id="units" className="py-16 px-4 bg-white">
+      {/* Three Businesses */}
+      <section id="businesses" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#507e37' }}>Available Units</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#507e37' }}>Our Three Businesses</h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#5f6360' }}>
-              Each unit comes with modern amenities and countryside views
+              Discover the diverse enterprises that call Caia Farm home
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((unit) => (
-              <Card key={unit} className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#b1d3ef' }}>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-xl" style={{ color: '#507e37' }}>Unit {unit}</CardTitle>
-                  <CardDescription style={{ color: '#5f6360' }}>
-                    {unit <= 2 ? "Corner units with maximum natural light" : 
-                     unit <= 4 ? "Central units with excellent access" : 
-                     "End units offering privacy and tranquility"}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 text-sm mb-4" style={{ color: '#5f6360' }}>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                      <span>Dimensions: Available on request</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                      <span>Power supply included</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                      <span>Drive-up access available</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                      <span>WiFi ready installation</span>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Caia Farm Barns */}
+            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#80d19d' }}>
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#80d19d' }}>
+                  <Building className="h-6 w-6 text-white" />
+                </div>
+                <CardTitle className="text-xl text-black">Caia Farm Barns</CardTitle>
+                <CardDescription style={{ color: '#5f6360' }}>
+                  Premium barn rental spaces for storage and office use
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
+                    <span>6 flexible units available October 2025</span>
                   </div>
-                  <Button 
-                    className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: '#80d19d' }}
-                    onClick={() => window.location.href = '/units'}
-                  >
-                    View Details
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
+                    <span>Perfect for storage or office use</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
+                    <span>Beautiful countryside setting</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
+                    <span>Flexible rental terms</span>
+                  </div>
+                </div>
+                <Button 
+                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: '#80d19d' }}
+                  onClick={() => window.location.href = '/units'}
+                >
+                  View Barn Units
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Byproduct Services */}
+            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#3899ec' }}>
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#3899ec' }}>
+                  <Factory className="h-6 w-6 text-white" />
+                </div>
+                <CardTitle className="text-xl text-black">Byproduct Services</CardTitle>
+                <CardDescription style={{ color: '#5f6360' }}>
+                  Specialized agricultural waste management and processing
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
+                    <span>Agricultural waste processing</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
+                    <span>Sustainable solutions</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
+                    <span>Environmental compliance</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
+                    <span>Industry expertise</span>
+                  </div>
+                </div>
+                <Button 
+                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: '#3899ec' }}
+                  onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
+                >
+                  Visit Website
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Ryecroft Meadow */}
+            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#ff4040' }}>
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#ff4040' }}>
+                  <Leaf className="h-6 w-6 text-white" />
+                </div>
+                <CardTitle className="text-xl text-black">Ryecroft Meadow</CardTitle>
+                <CardDescription style={{ color: '#5f6360' }}>
+                  Premium agricultural and farming operations
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
+                    <span>Quality crop production</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
+                    <span>Livestock management</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
+                    <span>Sustainable farming practices</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
+                    <span>Land stewardship</span>
+                  </div>
+                </div>
+                <Button 
+                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: '#ff4040' }}
+                  onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
+                >
+                  Visit Website
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -174,28 +254,28 @@ const Index = () => {
       {/* Call to Action */}
       <section className="py-16 px-4" style={{ backgroundColor: '#507e37' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Secure Your Space?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Discover Our Farm Story</h2>
           <p className="text-xl mb-8" style={{ color: '#80d19d' }}>
-            Contact us today to discuss your requirements and arrange a viewing
+            Learn about our heritage, growth, and vision for the future
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity"
               style={{ backgroundColor: '#80d19d', color: '#507e37' }}
-              onClick={() => window.location.href = '/enquiry'}
+              onClick={() => window.location.href = '/about'}
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Make an Enquiry
+              <Calendar className="mr-2 h-5 w-5" />
+              Farm History
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
-              onClick={() => window.location.href = '/units'}
+              onClick={() => window.location.href = '/enquiry'}
             >
-              <Building className="mr-2 h-5 w-5" />
-              Detailed Information
+              <Mail className="mr-2 h-5 w-5" />
+              Contact Us
             </Button>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, MapPin } from "lucide-react";
@@ -99,16 +98,16 @@ const Units = () => {
       <Navigation />
       
       {/* Header */}
-      <section className="bg-white py-12 px-4 border-b">
+      <section className="py-12 px-4 border-b" style={{ backgroundColor: '#b1d3ef' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+          <div className="flex items-center gap-2 text-sm mb-4" style={{ color: '#5f6360' }}>
             <MapPin className="h-4 w-4" />
             <span>Caia Farm, North Wales</span>
           </div>
-          <h1 className="text-3xl font-semibold text-gray-900 mb-2">
+          <h1 className="text-3xl font-semibold mb-2" style={{ color: '#507e37' }}>
             Office and Storage Units Available from October 2025
           </h1>
-          <p className="text-gray-600">
+          <p style={{ color: '#5f6360' }}>
             6 unique units in a converted barn • Flexible rental options • Countryside location
           </p>
         </div>
@@ -121,7 +120,7 @@ const Units = () => {
             {units.map((unit) => (
               <Card 
                 key={unit.id} 
-                className="border-0 shadow-none cursor-pointer group"
+                className="border-0 shadow-md cursor-pointer group hover:shadow-lg transition-shadow"
                 onClick={() => window.location.href = `/unit/${unit.id}`}
               >
                 <div className="relative">
@@ -146,32 +145,32 @@ const Units = () => {
                 
                 <CardContent className="p-3">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-semibold text-gray-900 group-hover:underline">
+                    <h3 className="font-semibold group-hover:underline" style={{ color: '#507e37' }}>
                       {unit.name}
                     </h3>
                     <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-current" />
-                      <span className="text-sm font-medium">{unit.rating}</span>
+                      <Star className="h-4 w-4 fill-current" style={{ color: '#ff4040' }} />
+                      <span className="text-sm font-medium" style={{ color: '#5f6360' }}>{unit.rating}</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 text-sm mb-2">{unit.shortDescription}</p>
+                  <p className="text-sm mb-2" style={{ color: '#5f6360' }}>{unit.shortDescription}</p>
                   
                   <div className="flex flex-wrap gap-1 mb-3">
                     {unit.features.slice(0, 2).map((feature, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs">
+                      <Badge key={index} variant="secondary" className="text-xs" style={{ backgroundColor: '#b1d3ef', color: '#507e37' }}>
                         {feature}
                       </Badge>
                     ))}
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <Badge variant="outline" className="text-sm">
+                    <Badge variant="outline" className="text-sm border-2" style={{ borderColor: '#80d19d', color: '#507e37' }}>
                       {unit.size}
                     </Badge>
                     <div className="text-right">
-                      <span className="font-semibold text-gray-900">{unit.monthlyRate}</span>
-                      <span className="text-gray-600 text-sm"> /month</span>
+                      <span className="font-semibold" style={{ color: '#507e37' }}>{unit.monthlyRate}</span>
+                      <span className="text-sm" style={{ color: '#5f6360' }}> /month</span>
                     </div>
                   </div>
                 </CardContent>

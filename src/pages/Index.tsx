@@ -10,17 +10,28 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-20 px-4 min-h-[70vh] flex items-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1600&h=900&fit=crop')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Premium Barn Rentals
             </h1>
-            <h2 className="text-xl md:text-2xl text-green-700 font-semibold mb-4">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4" style={{ color: '#80d19d' }}>
               Six flexible units available October 2025
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
               Located in the heart of the countryside, our converted barn offers versatile spaces 
               perfect for storage or office use. Each unit can be rented individually or combined 
               to meet your specific requirements.
@@ -28,7 +39,8 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg"
+                className="px-8 py-4 text-lg text-white font-semibold hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: '#80d19d' }}
                 onClick={() => document.getElementById('units')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Available Units
@@ -37,7 +49,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-green-700 text-green-700 hover:bg-green-50 px-8 py-4 text-lg"
+                className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
                 onClick={() => window.location.href = '/enquiry'}
               >
                 Make Enquiry
@@ -48,13 +60,13 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4" style={{ backgroundColor: '#b1d3ef' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#507e37' }}>
               Why Choose Our Barn?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#5f6360' }}>
               Flexible, professional spaces in a beautiful countryside setting
             </p>
           </div>
@@ -62,13 +74,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center border-0 shadow-md bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-8 w-8 text-green-700" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
+                  <Calendar className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-gray-900">Available October 2025</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Available October 2025</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p style={{ color: '#5f6360' }}>
                   Perfect timing for your business expansion or storage needs
                 </p>
               </CardContent>
@@ -76,13 +88,13 @@ const Index = () => {
 
             <Card className="text-center border-0 shadow-md bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building className="h-8 w-8 text-green-700" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
+                  <Building className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-gray-900">6 Flexible Units</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>6 Flexible Units</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p style={{ color: '#5f6360' }}>
                   Rent individually, in sections, or take the entire barn space
                 </p>
               </CardContent>
@@ -90,13 +102,13 @@ const Index = () => {
 
             <Card className="text-center border-0 shadow-md bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-green-700" />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#80d19d' }}>
+                  <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-gray-900">Storage & Offices</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#507e37' }}>Storage & Offices</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p style={{ color: '#5f6360' }}>
                   Versatile spaces suitable for both commercial storage and office use
                 </p>
               </CardContent>
@@ -109,44 +121,45 @@ const Index = () => {
       <section id="units" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Available Units</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#507e37' }}>Available Units</h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#5f6360' }}>
               Each unit comes with modern amenities and countryside views
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((unit) => (
-              <Card key={unit} className="border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <Card key={unit} className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#b1d3ef' }}>
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl text-gray-900">Unit {unit}</CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardTitle className="text-xl" style={{ color: '#507e37' }}>Unit {unit}</CardTitle>
+                  <CardDescription style={{ color: '#5f6360' }}>
                     {unit <= 2 ? "Corner units with maximum natural light" : 
                      unit <= 4 ? "Central units with excellent access" : 
                      "End units offering privacy and tranquility"}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 text-sm text-gray-700 mb-4">
+                  <div className="space-y-2 text-sm mb-4" style={{ color: '#5f6360' }}>
                     <div className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
                       <span>Dimensions: Available on request</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
                       <span>Power supply included</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
                       <span>Drive-up access available</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
                       <span>WiFi ready installation</span>
                     </div>
                   </div>
                   <Button 
-                    className="w-full bg-green-700 hover:bg-green-800 text-white"
+                    className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: '#80d19d' }}
                     onClick={() => window.location.href = '/units'}
                   >
                     View Details
@@ -159,16 +172,17 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 bg-green-700 text-white">
+      <section className="py-16 px-4" style={{ backgroundColor: '#507e37' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Space?</h2>
-          <p className="text-xl mb-8 text-green-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Secure Your Space?</h2>
+          <p className="text-xl mb-8" style={{ color: '#80d19d' }}>
             Contact us today to discuss your requirements and arrange a viewing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 text-lg"
+              className="px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: '#80d19d', color: '#507e37' }}
               onClick={() => window.location.href = '/enquiry'}
             >
               <Mail className="mr-2 h-5 w-5" />

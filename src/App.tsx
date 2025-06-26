@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Units from "./pages/Units";
+import UnitDetail from "./pages/UnitDetail";
 import About from "./pages/About";
 import Enquiry from "./pages/Enquiry";
 import NotFound from "./pages/NotFound";
@@ -21,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/units" element={<Units />} />
+          <Route path="/unit/:id" element={<UnitDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/enquiry" element={<Enquiry />} />
           <Route path="*" element={<NotFound />} />

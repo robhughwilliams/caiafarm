@@ -41,7 +41,7 @@ const Enquiry = () => {
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Oops! Missing Information",
-        description: "Please fill in your name, email, and message. We promise it's not as complicated as assembling flat-pack furniture!",
+        description: "Please fill in your name, email, phone number, use, required move in and message!",
         variant: "destructive",
       });
       return;
@@ -50,7 +50,7 @@ const Enquiry = () => {
     // Simulate form submission
     toast({
       title: "Enquiry Sent Successfully! 🎉",
-      description: "We'll get back to you faster than a farmer chasing escaped chickens. Usually within 24 hours!",
+      description: "We'll get back to you as soon as possible. Usually within 48 hours!",
     });
 
     // Reset form
@@ -84,7 +84,7 @@ const Enquiry = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl mb-6">
-            Ready to join our barn family? We'd love to hear from you!
+            Could this be the space for you? We'd love to hear from you!
           </p>
           <p className="text-lg">
             Fill out the form below, and we'll get back to you quicker than you can say "outstanding in your field" 🌾
@@ -116,21 +116,21 @@ const Enquiry = () => {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-black">Phone</p>
+                      <p className="font-medium text-black">Phone: 07729 262101</p>
                       <p className="text-gray-600">Give us a call for a friendly chat</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-black">Email</p>
+                      <p className="font-medium text-black">Email: robert@caiafarm.co.uk</p>
                       <p className="text-gray-600">Drop us a line anytime</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5" style={{ color: '#ff4040' }} />
                     <div>
-                      <p className="font-medium text-black">Location</p>
+                      <p className="font-medium text-black">Location: Gresford</p>
                       <p className="text-gray-600">Beautiful countryside setting</p>
                     </div>
                   </div>
@@ -148,9 +148,8 @@ const Enquiry = () => {
                     <span className="font-medium text-black">Within 24 hours</span>
                   </div>
                   <p className="text-gray-600">
-                    We aim to respond to all enquiries within one working day. 
-                    If you don't hear from us, check your spam folder - 
-                    sometimes our emails get as lost as sheep!
+                    We aim to respond to all enquiries within 48 hours. 
+                    If you don't hear from us, check your spam folder!
                   </p>
                 </CardContent>
               </Card>

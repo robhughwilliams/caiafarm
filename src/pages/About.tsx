@@ -14,7 +14,7 @@ const About = () => {
       subtitle: "Tithe Apportionment Map of Gresford",
       image: "/lovable-uploads/63a9394d-d817-4dc7-9d99-653437c46ad1.png",
       content: `Our story begins in the early-Victorian countryside.
-The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compact small holding surrounded by pasture plots numbered 49–56. A cart-track linked the yard to the old Wrexham road, while a small pond (plot 51) waters stock in the meadow below. The farm was run by a small tenant-farmer family with a mix between arable and livestock, the classic Welsh "mixed farm" of its day. The occupier at the time was John Norbury and the landowner was the Dean and Chapter of Winchester.`
+The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compact small holding surrounded by pasture plots numbered 49–56. A cart-track linked the yard to the old Wrexham road, while a small pond (plot 51) still exists today. The farm was run by a small tenant-farmer family with a mix between arable and livestock, the classic Welsh "mixed farm" of its day. The occupier at the time was John Norbury and the landowner was the Dean and Chapter of Winchester.`
     },
     {
       year: "1874",
@@ -28,7 +28,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       title: "The Williams Family Arrives",
       subtitle: "First Generation",
       image: null,
-      content: `The first record of the Williams family occupying the farm is given by the marriage records of the Parish of Gresford when John Williams of Broswlyfa, Wrexham married Lillian Knight of Cropthorne, Worcestershire.`
+      content: `The first record of the Williams family occupying the farm is given by the marriage records of the Parish of Gresford when John Henry Williams of Broswlyfa, Wrexham married Lillian Knight of Cropthorne, Worcestershire. John passed away aged 39 and the farm passed to his brother, Robert Williams, known locally as "Bob the Caia"`
     },
     {
       year: "1938",
@@ -42,10 +42,10 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       title: "Stewardship & Welcome",
       subtitle: "A Living Heritage",
       image: null,
-      content: `Over a century on, we remain proudly family-run Farm, caring for the same hedgerows and farm buildings first set down on the 1842 tithe map. The farm is also now the home of Ryecroft Meadow.
+      content: `Over a century on, we remain a proudly family-run Farm, caring for the same hedgerows and farm buildings first set down on the 1842 tithe map. The farm is predominently arable, supplemented with some livestock. The farm is also now the proud home of Ryecroft Meadow.
 
 Our aim is simple:
-to blend modern rural enterprise with the deep-rooted heritage of Caeau Farm, preserving its history while diversifying the interests.`
+to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, preserving its history as a farmwhile diversifying the interests.`
     }
   ];
 
@@ -58,7 +58,7 @@ to blend modern rural enterprise with the deep-rooted heritage of Caeau Farm, pr
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4 text-black">The History of Caia Farm</h1>
           <p className="text-xl mb-6 text-black">
-            From 1842 to today - A timeline of our farm's heritage
+            From 1842 to today, a timeline of Caia Farm's heritage
           </p>
           <p className="text-lg text-black">
             Discover how Caeau Farm has evolved through the centuries while staying true to its Welsh roots! 🚜
@@ -150,8 +150,8 @@ to blend modern rural enterprise with the deep-rooted heritage of Caeau Farm, pr
               <CardContent className="py-12">
                 <h2 className="text-3xl font-bold mb-4 text-black">Be Part of Our Continuing Story</h2>
                 <p className="text-xl mb-8 max-w-2xl mx-auto text-black">
-                  From Victorian heritage to modern diversified farming - 
-                  your enterprise could be the next chapter in Caeau Farm's evolving story!
+                  From Victorian heritage to modern diversified farming,
+                  your enterprise could be the next chapter in Caia Farm's evolving story!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 

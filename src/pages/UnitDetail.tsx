@@ -24,7 +24,6 @@ const UnitDetail = () => {
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
       ],
-      rating: 4.9,
       features: ["Corner position", "Large windows", "Easy vehicle access", "Private entrance"],
       suitableFor: ["Small office", "Storage", "Workshop space"],
       amenities: ["High-speed internet", "24/7 access", "Parking space", "Security system"],
@@ -50,7 +49,6 @@ const UnitDetail = () => {
         "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop"
       ],
-      rating: 4.8,
       features: ["South-facing", "All-day sunlight", "Good insulation", "Shared loading area"],
       suitableFor: ["Office space", "Art studio", "Storage"],
       amenities: ["Natural light all day", "Climate control", "Shared facilities", "Loading dock access"],

@@ -32,8 +32,9 @@ const Index = () => {
               A working farm with diversified businesses
             </h2>
             <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Located in the heart of the countryside, Caia Farm is home to three thriving businesses: 
-              premium barn rentals, specialized agricultural services, and sustainable farming operations. 
+              Located in the heart of the countryside, Caia Farm is home to multiple thriving businesses: 
+              a working farm at it's core, ByProductServices waste management, Rycroft Meadow's private hire
+              dog walking fields, and premium barn rentals.
               Discover how tradition meets innovation on our working farm.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -95,7 +96,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p style={{ color: '#5f6360' }}>
-                  Three distinct businesses operating from our farm infrastructure
+                  Distinct businesses operating from our farm infrastructure
                 </p>
               </CardContent>
             </Card>
@@ -147,7 +148,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                    <span>Perfect for storage or office use</span>
+                    <span>Perfect for storage or commerical use</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
@@ -176,18 +177,18 @@ const Index = () => {
                 </div>
                 <CardTitle className="text-xl text-black">Byproduct Services</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
-                  Specialized agricultural waste management and processing
+                  Specialized waste management and processing
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Agricultural waste processing</span>
+                    <span>Waste collection andprocessing</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Sustainable solutions</span>
+                    <span>Septic Tank Installation</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
@@ -223,19 +224,19 @@ const Index = () => {
                 <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Quality crop production</span>
+                    <span>Private Hire Dog Walking Fields</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Livestock management</span>
+                    <span>Adventure Field: 5 acres of open space and sensory enrichment.</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Sustainable farming practices</span>
+                    <span>Agility Field: 2 acres with kennel club standard agility equipment.</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Land stewardship</span>
+                    <span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</span>
                   </div>
                 </div>
                 <Button 

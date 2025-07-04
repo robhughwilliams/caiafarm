@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Building, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import EnquiryForm from "../components/EnquiryForm";
 
 const Enquiry = () => {
   const { toast } = useToast();
@@ -98,150 +98,7 @@ const Enquiry = () => {
             
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="border-gray-200">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-black">Enquiry Form</CardTitle>
-                  <CardDescription className="text-gray-600">
-                    Tell us about your requirements - don't worry, we're good listeners (even better than cows)!
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    
-                    {/* Personal Information */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="name" className="text-black">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          placeholder="Your name"
-                          className="border-gray-200 focus:border-gray-400"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="email" className="text-black">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          placeholder="your.email@example.com"
-                          className="border-gray-200 focus:border-gray-400"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone" className="text-black">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          value={formData.phone}
-                          onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                          placeholder="01234 567890"
-                          className="border-gray-200 focus:border-gray-400"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="company" className="text-black">Company Name</Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                          placeholder="Your company (optional)"
-                          className="border-gray-200 focus:border-gray-400"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Unit Interest */}
-                    <div>
-                      <Label className="text-black mb-3 block">Which units interest you?</Label>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {units.map((unit) => (
-                          <div key={unit.id} className="flex items-center space-x-2">
-                            <Checkbox 
-                              id={`unit-${unit.id}`}
-                              checked={formData.interestedUnits.includes(unit.id)}
-                              onCheckedChange={(checked) => 
-                                handleUnitChange(unit.id, checked as boolean)
-                              }
-                            />
-                            <Label 
-                              htmlFor={`unit-${unit.id}`} 
-                              className="text-gray-700 text-sm cursor-pointer"
-                            >
-                              {unit.name}
-                            </Label>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Business Details */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="intendedUse" className="text-black">Intended Use</Label>
-                        <Select 
-                          value={formData.intendedUse} 
-                          onValueChange={(value) => setFormData(prev => ({ ...prev, intendedUse: value }))}
-                        >
-                          <SelectTrigger className="border-gray-200">
-                            <SelectValue placeholder="Select primary use" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="office">Office Space</SelectItem>
-                            <SelectItem value="storage">Storage</SelectItem>
-                            <SelectItem value="workshop">Workshop</SelectItem>
-                            <SelectItem value="mixed">Mixed Use</SelectItem>
-                            <SelectItem value="other">Other (please specify in message)</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label htmlFor="moveInDate" className="text-black">Preferred Move-in Date</Label>
-                        <Input
-                          id="moveInDate"
-                          type="date"
-                          value={formData.moveInDate}
-                          onChange={(e) => setFormData(prev => ({ ...prev, moveInDate: e.target.value }))}
-                          min="2025-10-01"
-                          className="border-gray-200 focus:border-gray-400"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Message */}
-                    <div>
-                      <Label htmlFor="message" className="text-black">Your Message *</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                        placeholder="Tell us about your requirements, any specific questions, or just say hello! We love a good chat."
-                        rows={5}
-                        className="border-gray-200 focus:border-gray-400"
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full text-white hover:opacity-90"
-                      style={{ backgroundColor: '#ff4040' }}
-                    >
-                      <Send className="mr-2 h-5 w-5" />
-                      Send Enquiry
-                    </Button>
-                    
-                    <p className="text-sm text-gray-600 text-center">
-                      * Required fields - we promise we're not as picky as a cow choosing grass!
-                    </p>
-                  </form>
-                </CardContent>
-              </Card>
+              <EnquiryForm />
             </div>
 
             {/* Contact Information */}

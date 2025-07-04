@@ -123,7 +123,13 @@ const Units = () => {
                 className="border-0 shadow-md cursor-pointer group hover:shadow-lg transition-shadow"
                 onClick={() => window.location.href = `/unit/${unit.id}`}
               >
-                <div className="relative">
+                <div
+                  className="relative"
+                  onClick={e => e.stopPropagation()}
+                  onMouseDown={e => e.stopPropagation()}
+                  onTouchStart={e => e.stopPropagation()}
+                  onKeyDown={e => e.stopPropagation()}
+                >
                   <Carousel className="w-full">
                     <CarouselContent>
                       {unit.images.map((image, index) => (

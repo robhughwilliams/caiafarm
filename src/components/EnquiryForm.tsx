@@ -115,6 +115,16 @@ export default function EnquiryForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        {/* Add a hidden static form for Netlify build detection */}
+        <form name="enquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="dates" />
+          <input type="text" name="intendedUse" />
+          <input type="text" name="message" />
+          <input name="bot-field" />
+        </form>
         <form
           ref={formRef}
           name="enquiry"

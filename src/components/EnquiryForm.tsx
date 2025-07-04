@@ -81,18 +81,8 @@ export default function EnquiryForm() {
       form.reportValidity();
       return;
     }
-    // reCAPTCHA validation
-    if (!(window as any).grecaptcha) {
-      setError("reCAPTCHA not loaded");
-      setStatus("error");
-      return;
-    }
-    const recaptchaToken = await new Promise<string>((resolve) => {
-      (window as any).grecaptcha.execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: "submit" }).then(resolve);
-    });
     // Prepare data
     const data = new FormData(form);
-    data.append("g-recaptcha-response", recaptchaToken);
     const body = new URLSearchParams(data as any).toString();
     try {
       const res = await fetch("/", {
@@ -271,8 +261,6 @@ export default function EnquiryForm() {
               className="border-gray-200 focus:border-gray-400"
             />
           </div>
-          {/* reCAPTCHA widget */}
-          <div className="g-recaptcha" data-sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}></div>
           <Button type="submit" size="lg" className="w-full text-white hover:opacity-90" style={{ backgroundColor: '#ff4040' }}>
             Send Enquiry
           </Button>

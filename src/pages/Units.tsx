@@ -130,23 +130,34 @@ const Units = () => {
                   onTouchStart={e => e.stopPropagation()}
                   onKeyDown={e => e.stopPropagation()}
                 >
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {unit.images.map((image, index) => (
-                        <CarouselItem key={index}>
-                          <div className="aspect-[4/3] relative">
-                            <img
-                              src={image}
-                              alt={`${unit.name} - Image ${index + 1}`}
-                              className="w-full h-full object-cover rounded-xl"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-2" onClick={e => e.stopPropagation()} />
-                    <CarouselNext className="right-2" onClick={e => e.stopPropagation()} />
-                  </Carousel>
+                  {/* Carousel with error boundary for context */}
+                  {(() => {
+                    try {
+                      return (
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {unit.images.map((image, index) => (
+                              <CarouselItem key={index}>
+                                <div className="aspect-[4/3] relative">
+                                  <img
+                                    src={image}
+                                    alt={`${unit.name} - Image ${index + 1}`}
+                                    className="w-full h-full object-cover rounded-xl"
+                                  />
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-2" />
+                          <CarouselNext className="right-2" />
+                        </Carousel>
+                      );
+                    } catch (e) {
+                      return (
+                        <div className="text-red-600 text-center mt-2">Carousel failed to load. Please check embla-carousel-react dependency and ensure Carousel is used correctly.</div>
+                      );
+                    }
+                  })()}
                 </div>
                 
                 <CardContent className="p-3">

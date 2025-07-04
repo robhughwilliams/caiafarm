@@ -1,4 +1,3 @@
-
 import { Heart, MapPin, Users, Calendar, Tractor, Coffee } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -148,16 +147,15 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
           <section className="text-center mt-16">
             <Card className="border-gray-200 text-white" style={{ backgroundColor: '#80d19d' }}>
               <CardContent className="py-12">
-                <h2 className="text-3xl font-bold mb-4 text-black">Be Part of Our Continuing Story</h2>
-                <p className="text-xl mb-8 max-w-2xl mx-auto text-black">
+                <h2 className="text-3xl font-bold mb-4 text-white">Be Part of Our Continuing Story</h2>
+                <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
                   From Victorian heritage to modern diversified farming,
                   your enterprise could be the next chapter in Caia Farm's evolving story!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     size="lg" 
-                    className="bg-white hover:bg-gray-100"
-                    style={{ color: '#507e37' }}
+                    className="bg-white hover:bg-gray-100 text-[#507e37] font-semibold"
                     onClick={() => window.location.href = '/units'}
                   >
                     Explore Our Businesses
@@ -165,7 +163,7 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-white text-black hover:bg-white/10"
+                    className="border-white text-[#507e37] bg-white hover:bg-gray-100 font-semibold"
                     onClick={() => window.location.href = '/enquiry'}
                   >
                     Get in Touch

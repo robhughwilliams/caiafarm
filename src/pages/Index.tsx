@@ -1,4 +1,3 @@
-
 import { Building, Calendar, Users, Mail, Phone, MapPin, ArrowRight, Tractor, Leaf, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,10 +27,10 @@ const Index = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Welcome to Caia Farm
             </h1>
-            <h2 className="text-xl md:text-2xl font-semibold mb-4" style={{ color: '#80d19d' }}>
+            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-white">
               A working farm with diversified businesses
             </h2>
-            <p className="text-lg text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-white mb-8 leading-relaxed max-w-3xl mx-auto">
               Located in the heart of the countryside, Caia Farm is home to multiple thriving businesses: 
               a working farm at it's core, ByProductServices waste management, Rycroft Meadow's private hire
               dog walking fields, and premium barn rentals.
@@ -40,8 +39,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="px-8 py-4 text-lg text-white font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: '#80d19d' }}
+                className="px-8 py-4 text-lg font-semibold bg-white text-[#507e37] hover:bg-gray-100 transition-opacity"
                 onClick={() => document.getElementById('businesses')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore Our Businesses
@@ -50,7 +48,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
+                className="border-2 border-white text-[#507e37] bg-white hover:bg-gray-100 px-8 py-4 text-lg"
                 onClick={() => window.location.href = '/about'}
               >
                 Our Farm History
@@ -256,14 +254,13 @@ const Index = () => {
       <section className="py-16 px-4" style={{ backgroundColor: '#507e37' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Discover Our Farm Story</h2>
-          <p className="text-xl mb-8" style={{ color: '#80d19d' }}>
+          <p className="text-xl mb-8 text-white">
             Learn about our heritage, growth, and vision for the future
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#80d19d', color: '#507e37' }}
+              className="px-8 py-4 text-lg font-semibold bg-white text-[#507e37] hover:bg-gray-100"
               onClick={() => window.location.href = '/about'}
             >
               <Calendar className="mr-2 h-5 w-5" />
@@ -272,7 +269,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
+              className="border-2 border-white text-[#507e37] bg-white hover:bg-gray-100 px-8 py-4 text-lg"
               onClick={() => window.location.href = '/enquiry'}
             >
               <Mail className="mr-2 h-5 w-5" />

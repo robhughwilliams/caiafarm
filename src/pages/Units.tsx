@@ -138,8 +138,8 @@ const Units = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious className="left-2" />
-                    <CarouselNext className="right-2" />
+                    <CarouselPrevious className="left-2" onClick={e => e.stopPropagation()} />
+                    <CarouselNext className="right-2" onClick={e => e.stopPropagation()} />
                   </Carousel>
                 </div>
                 
@@ -148,10 +148,6 @@ const Units = () => {
                     <h3 className="font-semibold group-hover:underline" style={{ color: '#507e37' }}>
                       {unit.name}
                     </h3>
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-current" style={{ color: '#ff4040' }} />
-                      <span className="text-sm font-medium" style={{ color: '#5f6360' }}>{unit.rating}</span>
-                    </div>
                   </div>
                   
                   <p className="text-sm mb-2" style={{ color: '#5f6360' }}>{unit.shortDescription}</p>

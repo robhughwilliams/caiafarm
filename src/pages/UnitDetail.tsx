@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { ArrowLeft, Star, MapPin, Wifi, Zap, Car, Shield, Users, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -131,10 +130,6 @@ const UnitDetail = () => {
               <Badge variant="outline" className="text-base px-3 py-1">
                 {unit.size}
               </Badge>
-              <div className="flex items-center gap-1">
-                <Star className="h-5 w-5 fill-current text-yellow-400" />
-                <span className="font-medium">{unit.rating}</span>
-              </div>
             </div>
 
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
@@ -212,10 +207,6 @@ const UnitDetail = () => {
                       {unit.monthlyRate}
                       <span className="text-base font-normal text-gray-600"> /month</span>
                     </CardTitle>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="h-4 w-4 fill-current text-yellow-400" />
-                    <span className="font-medium">{unit.rating}</span>
                   </div>
                 </div>
               </CardHeader>

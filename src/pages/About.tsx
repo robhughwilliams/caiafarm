@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 
 const About = () => {
   const timelineEvents = [
@@ -80,68 +81,46 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
           </section>
 
           {/* Timeline */}
-          <ScrollArea className="h-[800px] w-full">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
-              
-              <div className="space-y-12">
-                {timelineEvents.map((event, index) => (
-                  <div key={index} className="relative flex items-start">
-                    {/* Timeline dot */}
-                    <div 
-                      className="absolute left-6 w-4 h-4 rounded-full border-4 border-white shadow-lg z-10"
-                      style={{ backgroundColor: '#507e37' }}
-                    ></div>
-                    
-                    {/* Content */}
-                    <div className="ml-20 w-full">
-                      <Card className="border-gray-200 hover:shadow-lg transition-all duration-300 opacity-100 hover:opacity-95">
-                        <CardHeader>
-                          <div className="flex items-center gap-4 mb-2">
-                            <span 
-                              className="text-2xl font-bold px-3 py-1 rounded text-white"
-                              style={{ backgroundColor: '#ff4040' }}
-                            >
-                              {event.year}
-                            </span>
-                            <div>
-                              <CardTitle className="text-black text-xl">{event.title}</CardTitle>
-                              <CardDescription className="text-gray-600 font-medium">
-                                {event.subtitle}
-                              </CardDescription>
-                            </div>
+          <div className="space-y-6">
+            {timelineEvents.map((event, index) => (
+              <Collapsible key={index}>
+                <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
+                  <span className="text-2xl font-bold">{event.year}</span>
+                  <span className="text-lg font-semibold">{event.title}</span>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <Card className="border-gray-200 hover:shadow-lg transition-all duration-300 mt-2">
+                    <CardHeader>
+                      <CardTitle className="text-black text-xl">{event.title}</CardTitle>
+                      <CardDescription className="text-gray-600 font-medium">{event.subtitle}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        {event.image && (
+                          <div className="order-2 lg:order-1">
+                            <img 
+                              src={event.image} 
+                              alt={`Historical map from ${event.year}`}
+                              className="w-full h-64 object-cover rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                            />
                           </div>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {event.image && (
-                              <div className="order-2 lg:order-1">
-                                <img 
-                                  src={event.image} 
-                                  alt={`Historical map from ${event.year}`}
-                                  className="w-full h-64 object-cover rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-                                />
-                              </div>
-                            )}
-                            <div className={`${event.image ? 'order-1 lg:order-2' : 'col-span-full'}`}>
-                              <div className="prose prose-gray max-w-none">
-                                {event.content.split('\n\n').map((paragraph, pIndex) => (
-                                  <p key={pIndex} className="text-gray-800 leading-relaxed mb-4">
-                                    {paragraph}
-                                  </p>
-                                ))}
-                              </div>
-                            </div>
+                        )}
+                        <div className={`${event.image ? 'order-1 lg:order-2' : 'col-span-full'}`}>
+                          <div className="prose prose-gray max-w-none">
+                            {event.content.split('\n\n').map((paragraph, pIndex) => (
+                              <p key={pIndex} className="text-gray-800 leading-relaxed mb-4">
+                                {paragraph}
+                              </p>
+                            ))}
                           </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollArea>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CollapsibleContent>
+              </Collapsible>
+            ))}
+          </div>
 
           {/* Call to Action */}
           <section className="text-center mt-16">

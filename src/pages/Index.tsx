@@ -31,10 +31,7 @@ const Index = () => {
               A working farm with diversified businesses
             </h2>
             <p className="text-lg text-white mb-8 leading-relaxed max-w-3xl mx-auto">
-              Located in the heart of the countryside, Caia Farm is home to multiple thriving businesses: 
-              a working farm at it's core, ByProductServices waste management, Rycroft Meadow's private hire
-              dog walking fields, and premium barn rentals.
-              Discover how tradition meets innovation on our working farm.
+              Located on the outskirts of Wrexham in the Welsh countryside, Caia Farm is home to multiple thriving businesses: a working farm at it's core, ByProductServices waste management, Rycroft Meadow's private hire dog walking fields, and premium barn rentals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -157,22 +154,21 @@ const Index = () => {
                     <span>Flexible rental terms</span>
                   </div>
                 </div>
-                <Button 
-                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: '#80d19d' }}
-                  onClick={() => window.location.href = '/units'}
-                >
-                  View Barn Units
-                </Button>
+                <div className="flex justify-center">
+                  <Button 
+                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    onClick={() => window.location.href = '/units'}
+                  >
+                    View Barn Units
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
             {/* Byproduct Services */}
-            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#3899ec' }}>
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#3899ec' }}>
-                  <Factory className="h-6 w-6 text-white" />
-                </div>
+            <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#3899ec' }}>
+              <CardHeader className="pb-4 flex flex-col items-center">
+                <img src="/lovable-uploads/byproduct-logo.png" alt="ByProduct Services Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
                 <CardTitle className="text-xl text-black">Byproduct Services</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
                   Specialized waste management and processing
@@ -182,7 +178,7 @@ const Index = () => {
                 <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Waste collection andprocessing</span>
+                    <span>Waste collection and processing</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
@@ -197,22 +193,21 @@ const Index = () => {
                     <span>Industry expertise</span>
                   </div>
                 </div>
-                <Button 
-                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: '#3899ec' }}
-                  onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
-                >
-                  Visit Website
-                </Button>
+                <div className="flex justify-center">
+                  <Button 
+                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
+                  >
+                    Visit Website
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
             {/* Ryecroft Meadow */}
-            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#ff4040' }}>
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#ff4040' }}>
-                  <Leaf className="h-6 w-6 text-white" />
-                </div>
+            <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#ff4040' }}>
+              <CardHeader className="pb-4 flex flex-col items-center">
+                <img src="/lovable-uploads/ryecroft-logo.png" alt="Ryecroft Meadow Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
                 <CardTitle className="text-xl text-black">Ryecroft Meadow</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
                   Premium agricultural and farming operations
@@ -237,13 +232,14 @@ const Index = () => {
                     <span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</span>
                   </div>
                 </div>
-                <Button 
-                  className="w-full text-white font-semibold hover:opacity-90 transition-opacity"
-                  style={{ backgroundColor: '#ff4040' }}
-                  onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
-                >
-                  Visit Website
-                </Button>
+                <div className="flex justify-center">
+                  <Button 
+                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
+                  >
+                    Visit Website
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>

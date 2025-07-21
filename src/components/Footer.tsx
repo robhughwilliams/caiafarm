@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center" style={{ color: '#b1d3ef' }}>
               <MapPin className="h-5 w-5 mr-3" style={{ color: '#80d19d' }} />
-              <span>Beautiful countryside location</span>
+              <span>Caia Farm,<br />Old Wrexham Road,<br />Gresford,<br />Wrexham.<br />LL12 8UA.</span>
             </div>
           </div>
 

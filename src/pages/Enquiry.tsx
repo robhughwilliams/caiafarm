@@ -145,7 +145,7 @@ const Enquiry = () => {
                 <CardContent>
                   <div className="flex items-center space-x-3 mb-3">
                     <Calendar className="h-5 w-5" style={{ color: '#ff4040' }} />
-                    <span className="font-medium text-black">Within 24 hours</span>
+                    <span className="font-medium text-black">Within 48 hours</span>
                   </div>
                   <p className="text-gray-600">
                     We aim to respond to all enquiries within 48 hours. 

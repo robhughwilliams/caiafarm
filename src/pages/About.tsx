@@ -43,7 +43,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       year: "Today",
       title: "Stewardship & Welcome",
       subtitle: "A Living Heritage",
-      image: "/assets/today.png",
+      image: "/assets/Today.png",
       content: `Over a century on, we remain a proudly family-run Farm, caring for the same hedgerows and farm buildings first set down on the 1842 tithe map. The farm is predominently arable, supplemented with some livestock. The farm is also now the proud home of Ryecroft Meadow.
 
 Our aim is simple:

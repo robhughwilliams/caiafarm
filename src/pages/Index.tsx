@@ -156,7 +156,7 @@ const Index = () => {
                 </div>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    className="w-full bg-[#80d19d] text-white font-semibold hover:bg-[#5f6360]"
                     onClick={() => window.location.href = '/units'}
                   >
                     View Barn Units
@@ -168,7 +168,7 @@ const Index = () => {
             {/* Byproduct Services */}
             <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#3899ec' }}>
               <CardHeader className="pb-4 flex flex-col items-center">
-                <img src="/lovable-uploads/byproduct-logo.png" alt="ByProduct Services Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
+                <img src="/assets/byproduct-logo.png" alt="ByProduct Services Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
                 <CardTitle className="text-xl text-black">Byproduct Services</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
                   Specialized waste management and processing
@@ -195,7 +195,7 @@ const Index = () => {
                 </div>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    className="w-full bg-[#3899ec] text-white font-semibold hover:bg-blue-800"
                     onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
                   >
                     Visit Website
@@ -207,7 +207,7 @@ const Index = () => {
             {/* Ryecroft Meadow */}
             <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#ff4040' }}>
               <CardHeader className="pb-4 flex flex-col items-center">
-                <img src="/lovable-uploads/ryecroft-logo.png" alt="Ryecroft Meadow Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
+                <img src="/assets/ryecroft-logo.png" alt="Ryecroft Meadow Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
                 <CardTitle className="text-xl text-black">Ryecroft Meadow</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
                   Premium agricultural and farming operations
@@ -234,7 +234,7 @@ const Index = () => {
                 </div>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-white text-[#507e37] font-semibold hover:bg-gray-100"
+                    className="w-full bg-[#ff4040] text-white font-semibold hover:bg-red-700"
                     onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
                   >
                     Visit Website

@@ -1,4 +1,4 @@
-import { Heart, MapPin, Users, Calendar, Tractor, Coffee } from "lucide-react";
+import { Heart, MapPin, Users, Calendar, Tractor, Coffee, ChevronDown, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -84,10 +84,15 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
           <div className="space-y-6">
             {timelineEvents.map((event, index) => (
               <Collapsible key={index}>
-                <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
-                  <span className="text-2xl font-bold">{event.year}</span>
-                  <span className="text-lg font-semibold">{event.title}</span>
-                </CollapsibleTrigger>
+                {({ open }) => (
+                  <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
+                    <span className="transition-transform" style={{ transform: open ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                      <ChevronRight />
+                    </span>
+                    <span className="text-2xl font-bold">{event.year}</span>
+                    <span className="text-lg font-semibold">{event.title}</span>
+                  </CollapsibleTrigger>
+                )}
                 <CollapsibleContent>
                   <Card className="border-gray-200 hover:shadow-lg transition-all duration-300 mt-2">
                     <CardHeader>
@@ -99,7 +104,7 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
                         {event.image && (
                           <div className="order-2 lg:order-1">
                             <img 
-                              src={event.image} 
+                              src={event.image.replace('/lovable-uploads/', '/assets/')} 
                               alt={`Historical map from ${event.year}`}
                               className="w-full h-64 object-cover rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                             />

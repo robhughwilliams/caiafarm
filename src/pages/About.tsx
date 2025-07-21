@@ -5,8 +5,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const About = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const timelineEvents = [
     {
       year: "1842",
@@ -83,16 +85,18 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
           {/* Timeline */}
           <div className="space-y-6">
             {timelineEvents.map((event, index) => (
-              <Collapsible key={index}>
-                {({ open }) => (
-                  <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
-                    <span className="transition-transform" style={{ transform: open ? 'rotate(90deg)' : 'rotate(0deg)' }}>
-                      <ChevronRight />
-                    </span>
-                    <span className="text-2xl font-bold">{event.year}</span>
-                    <span className="text-lg font-semibold">{event.title}</span>
-                  </CollapsibleTrigger>
-                )}
+              <Collapsible
+                key={index}
+                open={openIndex === index}
+                onOpenChange={(open) => setOpenIndex(open ? index : null)}
+              >
+                <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
+                  <span className="transition-transform" style={{ transform: openIndex === index ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                    <ChevronRight />
+                  </span>
+                  <span className="text-2xl font-bold">{event.year}</span>
+                  <span className="text-lg font-semibold">{event.title}</span>
+                </CollapsibleTrigger>
                 <CollapsibleContent>
                   <Card className="border-gray-200 hover:shadow-lg transition-all duration-300 mt-2">
                     <CardHeader>

@@ -12,7 +12,7 @@ const About = () => {
       year: "1842",
       title: "Fields & Furrows",
       subtitle: "Tithe Apportionment Map of Gresford",
-      image: "/lovable-uploads/63a9394d-d817-4dc7-9d99-653437c46ad1.png",
+      image: "/assets/63a9394d-d817-4dc7-9d99-653437c46ad1.png",
       content: `Our story begins in the early-Victorian countryside.
 The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compact small holding surrounded by pasture plots numbered 49–56. A cart-track linked the yard to the old Wrexham road, while a small pond (plot 51) still exists today. The farm was run by a small tenant-farmer family with a mix between arable and livestock, the classic Welsh "mixed farm" of its day. The occupier at the time was John Norbury and the landowner was the Dean and Chapter of Winchester.`
     },
@@ -20,7 +20,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       year: "1874",
       title: "Victorian Enterprise",
       subtitle: "Ordnance Survey – Cheshire Sheet LIII (pub. 1881)",
-      image: "/lovable-uploads/0acfeba1-b3cf-42d3-b52c-4d3702d1330e.png",
+      image: "/assets/0acfeba1-b3cf-42d3-9d99-653437c46ad1.png",
       content: `Three decades later the first large-scale OS map captures the farm in full Victorian stride. New buildings flank the original farmhouse, while neat lines of trees mark the boundaries. The map labels the holding "Caeau", affirming both its Welsh roots. Produce at this time would have travelled to town markets by horse-drawn cart.`
     },
     {
@@ -34,7 +34,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       year: "1938",
       title: "Modern Mechanisation",
       subtitle: "Ordnance Survey – Denbighshire Sheet XXI.SE (rev. 1938, pub. ≈1946)",
-      image: "/lovable-uploads/c3513e3e-ee7b-40b2-91da-f8b15af85620.png",
+      image: "/assets/c3513e3e-ee7b-40b2-91da-f8b15af85620.png",
       content: `On the eve of World War II, the revised survey shows further development with a yard suitable for tractors. A Dutch-barn now appear aside the farmhouse, at this time it is likely that electricity lines now cross the fields. Yet the core farmhouse remained unchanged, still anchoring the landscape just as they did a century before.`
     },
     {

@@ -125,8 +125,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Caia Farm Barns */}
-            <Card className="border-2 hover:shadow-lg transition-all duration-300" style={{ borderColor: '#80d19d' }}>
-              <CardHeader className="pb-4">
+            <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#80d19d' }}>
+              <CardHeader className="pb-4 flex flex-col items-center">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#80d19d' }}>
                   <Building className="h-6 w-6 text-white" />
                 </div>
@@ -136,27 +136,15 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                    <span>6 flexible units available October 2025</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                    <span>Perfect for storage or commerical use</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                    <span>Beautiful countryside setting</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></div>
-                    <span>Flexible rental terms</span>
-                  </div>
-                </div>
+                <ul className="mb-6 space-y-2">
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>6 flexible units available October 2025</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Perfect for storage or commercial use</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Beautiful countryside setting</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Flexible rental terms</li>
+                </ul>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-[#80d19d] text-white font-semibold hover:bg-[#5f6360]"
+                    className="w-48 bg-[#80d19d] text-white font-semibold hover:bg-[#5f6360]"
                     onClick={() => window.location.href = '/units'}
                   >
                     View Barn Units
@@ -169,33 +157,21 @@ const Index = () => {
             <Card className="border-2 hover:shadow-lg transition-all duration-300 flex flex-col justify-between" style={{ borderColor: '#3899ec' }}>
               <CardHeader className="pb-4 flex flex-col items-center">
                 <img src="/assets/byproduct-logo.png" alt="ByProduct Services Logo" className="h-16 mb-4" style={{ objectFit: 'contain' }} />
-                <CardTitle className="text-xl text-black">Byproduct Services</CardTitle>
+                <CardTitle className="text-xl text-black">ByProduct Services</CardTitle>
                 <CardDescription style={{ color: '#5f6360' }}>
-                  Specialized waste management and processing
+                  Specialised waste management and processing
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Waste collection and processing</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Septic Tank Installation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Environmental compliance</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></div>
-                    <span>Industry expertise</span>
-                  </div>
-                </div>
+                <ul className="mb-6 space-y-2">
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Waste collection and processing</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Septic Tank Installation</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Environmental compliance</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Industry expertise</li>
+                </ul>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-[#3899ec] text-white font-semibold hover:bg-blue-800"
+                    className="w-48 bg-[#3899ec] text-white font-semibold hover:bg-blue-800"
                     onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
                   >
                     Visit Website
@@ -214,27 +190,15 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm mb-6" style={{ color: '#5f6360' }}>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Private Hire Dog Walking Fields</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Adventure Field: 5 acres of open space and sensory enrichment.</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Agility Field: 2 acres with kennel club standard agility equipment.</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></div>
-                    <span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</span>
-                  </div>
-                </div>
+                <ul className="mb-6 space-y-2">
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Private Hire Dog Walking Fields</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Adventure Field: 5 acres of open space and sensory enrichment.</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Agility Field: 2 acres with kennel club standard agility equipment.</li>
+                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</li>
+                </ul>
                 <div className="flex justify-center">
                   <Button 
-                    className="w-full bg-[#ff4040] text-white font-semibold hover:bg-red-700"
+                    className="w-48 bg-[#ff4040] text-white font-semibold hover:bg-red-700"
                     onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
                   >
                     Visit Website

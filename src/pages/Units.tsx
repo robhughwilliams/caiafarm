@@ -4,6 +4,7 @@ import { Star, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 const Units = () => {
   const units = [
@@ -92,6 +93,22 @@ const Units = () => {
       features: ["Separate entrance", "Maximum privacy", "End position"]
     }
   ];
+
+  const [viewCounts, setViewCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    const unitIds = units.map((u) => u.id.toString());
+    fetch("/.netlify/functions/unitView", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ unitIds }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setViewCounts(data.counts || {});
+      })
+      .catch(() => setViewCounts({}));
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -186,6 +203,11 @@ const Units = () => {
                       <span className="text-sm" style={{ color: '#5f6360' }}> /month</span>
                     </div>
                   </div>
+                  {typeof viewCounts[unit.id.toString()] === "number" && (
+                    <div className="mb-2 text-green-700 text-xs font-medium">
+                      {viewCounts[unit.id.toString()]} {viewCounts[unit.id.toString()] === 1 ? "person has" : "people have"} viewed this unit this week
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

@@ -28,11 +28,19 @@ exports.handler = async function(event, context) {
     };
   }
 
-  const { unitId } = body;
-  if (!unitId) {
+  let unitIds = [];
+  let logUnitId = null;
+
+  if (Array.isArray(body.unitIds)) {
+    unitIds = body.unitIds.map(String);
+  } else if (body.unitId) {
+    // Backward compatibility: single unitId
+    logUnitId = String(body.unitId);
+    unitIds = [logUnitId];
+  } else {
     return {
       statusCode: 400,
-      body: 'Missing unitId',
+      body: 'Missing unitId(s)',
     };
   }
 
@@ -47,20 +55,24 @@ exports.handler = async function(event, context) {
   }
 
   const now = new Date();
-  data.push({ unitId, timestamp: now.toISOString() });
+  // Only log a view if a single unitId is provided (detail page)
+  if (logUnitId) {
+    data.push({ unitId: logUnitId, timestamp: now.toISOString() });
+    fs.writeFileSync(DATA_FILE, JSON.stringify(data), 'utf8');
+  }
 
-  // Save updated data
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data), 'utf8');
-
-  // Calculate views for this unit in the current week
+  // Calculate views for each unit in the current week
   const startOfWeek = getStartOfWeek(now);
-  const viewsThisWeek = data.filter(
-    v => v.unitId === unitId && new Date(v.timestamp) >= startOfWeek
-  ).length;
+  const counts = {};
+  unitIds.forEach((id) => {
+    counts[id] = data.filter(
+      v => String(v.unitId) === id && new Date(v.timestamp) >= startOfWeek
+    ).length;
+  });
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ viewsThisWeek }),
+    body: JSON.stringify({ counts }),
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',

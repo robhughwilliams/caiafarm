@@ -203,11 +203,6 @@ const Units = () => {
                       <span className="text-sm" style={{ color: '#5f6360' }}> /month</span>
                     </div>
                   </div>
-                  {typeof viewCounts[unit.id.toString()] === "number" && (
-                    <div className="mb-2 text-green-700 text-xs font-medium">
-                      {viewCounts[unit.id.toString()]} {viewCounts[unit.id.toString()] === 1 ? "person has" : "people have"} viewed this unit this week
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             ))}

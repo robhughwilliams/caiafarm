@@ -193,6 +193,12 @@ const Units = () => {
                       </Badge>
                     ))}
                   </div>
+                  {typeof viewCounts[unit.id.toString()] === "number" && (
+                    <div className="mb-2 text-green-700 text-xs font-medium">
+                      {viewCounts[unit.id.toString()]}{" "}
+                      {viewCounts[unit.id.toString()] === 1 ? "person has" : "people have"} viewed this unit this week
+                    </div>
+                  )}
                   
                   <div className="flex justify-between items-center">
                     <Badge variant="outline" className="text-sm border-2" style={{ borderColor: '#80d19d', color: '#507e37' }}>

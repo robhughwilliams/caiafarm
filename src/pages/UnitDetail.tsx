@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
 
 const UnitDetail = () => {
   const { id } = useParams();
@@ -75,6 +76,22 @@ const UnitDetail = () => {
     { icon: Ruler, title: "Flexible Space", description: "Expandable options" },
   ];
 
+  const [viewsThisWeek, setViewsThisWeek] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!unit?.id) return;
+    fetch("/.netlify/functions/unitView", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ unitId: unit.id }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setViewsThisWeek(data.viewsThisWeek);
+      })
+      .catch(() => setViewsThisWeek(null));
+  }, [unit?.id]);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -123,6 +140,11 @@ const UnitDetail = () => {
             </div>
             
             <h1 className="text-3xl font-bold text-gray-900 mb-4">{unit.name}</h1>
+            {viewsThisWeek !== null && (
+              <div className="mb-2 text-green-700 text-sm font-medium">
+                {viewsThisWeek} {viewsThisWeek === 1 ? "person has" : "people have"} viewed this unit this week
+              </div>
+            )}
             
             <div className="flex items-center gap-4 mb-6">
               <Badge variant="outline" className="text-base px-3 py-1">

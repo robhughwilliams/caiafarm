@@ -87,7 +87,9 @@ const UnitDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setViewsThisWeek(data.viewsThisWeek);
+        const counts = data && data.counts ? data.counts : {};
+        const countForUnit = counts[String(unit.id)];
+        setViewsThisWeek(typeof countForUnit === "number" ? countForUnit : 0);
       })
       .catch(() => setViewsThisWeek(null));
   }, [unit?.id]);

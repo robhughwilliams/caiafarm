@@ -111,20 +111,20 @@ const Units = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Header */}
-      <section className="py-12 px-4 border-b" style={{ backgroundColor: '#b1d3ef' }}>
+      <section className="py-12 px-4 border-b border-border bg-secondary">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 text-sm mb-4" style={{ color: '#5f6360' }}>
+          <div className="flex items-center gap-2 text-sm mb-4 text-muted-foreground">
             <MapPin className="h-4 w-4" />
             <span>Caia Farm, North Wales</span>
           </div>
-          <h1 className="text-3xl font-semibold mb-2" style={{ color: '#507e37' }}>
+          <h1 className="text-3xl font-semibold mb-2 text-primary">
             Office and Storage Units Available from October 2025
           </h1>
-          <p style={{ color: '#5f6360' }}>
+          <p className="text-muted-foreground">
             6 unique units in a converted barn • Flexible rental options • Countryside location
           </p>
         </div>
@@ -135,8 +135,8 @@ const Units = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {units.map((unit) => (
-              <Card 
-                key={unit.id} 
+              <Card
+                key={unit.id}
                 className="border-0 shadow-md cursor-pointer group hover:shadow-lg transition-shadow"
                 onClick={() => window.location.href = `/unit/${unit.id}`}
               >
@@ -171,42 +171,42 @@ const Units = () => {
                       );
                     } catch (e) {
                       return (
-                        <div className="text-red-600 text-center mt-2">Carousel failed to load. Please check embla-carousel-react dependency and ensure Carousel is used correctly.</div>
+                        <div className="text-destructive text-center mt-2">Carousel failed to load. Please check embla-carousel-react dependency and ensure Carousel is used correctly.</div>
                       );
                     }
                   })()}
                 </div>
-                
+
                 <CardContent className="p-3">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-semibold group-hover:underline" style={{ color: '#507e37' }}>
+                    <h3 className="font-semibold group-hover:underline text-primary">
                       {unit.name}
                     </h3>
                   </div>
-                  
-                  <p className="text-sm mb-2" style={{ color: '#5f6360' }}>{unit.shortDescription}</p>
-                  
+
+                  <p className="text-sm mb-2 text-muted-foreground">{unit.shortDescription}</p>
+
                   <div className="flex flex-wrap gap-1 mb-3">
                     {unit.features.slice(0, 2).map((feature, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs" style={{ backgroundColor: '#b1d3ef', color: '#507e37' }}>
+                      <Badge key={index} variant="secondary" className="text-xs">
                         {feature}
                       </Badge>
                     ))}
                   </div>
                   {typeof viewCounts[unit.id.toString()] === "number" && (
-                    <div className="mb-2 text-green-700 text-xs font-medium">
+                    <div className="mb-2 text-primary text-xs font-medium">
                       {viewCounts[unit.id.toString()]}{" "}
                       {viewCounts[unit.id.toString()] === 1 ? "person has" : "people have"} viewed this unit this week
                     </div>
                   )}
-                  
+
                   <div className="flex justify-between items-center">
-                    <Badge variant="outline" className="text-sm border-2" style={{ borderColor: '#80d19d', color: '#507e37' }}>
+                    <Badge variant="outline" className="text-sm border-2 border-border text-primary">
                       {unit.size}
                     </Badge>
                     <div className="text-right">
-                      <span className="font-semibold" style={{ color: '#507e37' }}>{unit.monthlyRate}</span>
-                      <span className="text-sm" style={{ color: '#5f6360' }}> /month</span>
+                      <span className="font-semibold text-primary">{unit.monthlyRate}</span>
+                      <span className="text-sm text-muted-foreground"> /month</span>
                     </div>
                   </div>
                 </CardContent>

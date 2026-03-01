@@ -14,12 +14,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-background shadow-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-gray-800 hover:text-green-700 transition-colors">
+            <a href="/" className="text-2xl font-heading font-semibold text-foreground hover:text-primary transition-colors">
              🚜 Caia Farm
             </a>
           </div>
@@ -30,7 +30,7 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="flex items-center text-gray-700 hover:text-green-700 transition-colors font-medium py-2"
+                className="flex items-center text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 <item.icon className="h-4 w-4 mr-2" />
                 {item.name}
@@ -44,7 +44,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700"
+              className="text-foreground"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -53,13 +53,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-100">
+          <div className="md:hidden pb-4 border-t border-border">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center text-gray-700 hover:text-green-700 transition-colors font-medium py-2"
+                  className="flex items-center text-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <item.icon className="h-4 w-4 mr-3" />

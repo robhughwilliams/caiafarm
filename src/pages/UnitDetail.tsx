@@ -95,13 +95,13 @@ const UnitDetail = () => {
   }, [unit?.id]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Back Button */}
       <div className="px-4 py-4 max-w-7xl mx-auto">
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"
           className="flex items-center gap-2"
           onClick={() => window.history.back()}
         >
@@ -136,25 +136,25 @@ const UnitDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
               <MapPin className="h-4 w-4" />
               <span>Caia Farm, North Wales</span>
             </div>
-            
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{unit.name}</h1>
+
+            <h1 className="text-3xl font-bold text-foreground mb-4">{unit.name}</h1>
             {viewsThisWeek !== null && (
-              <div className="mb-2 text-green-700 text-sm font-medium">
+              <div className="mb-2 text-primary text-sm font-medium">
                 {viewsThisWeek} {viewsThisWeek === 1 ? "person has" : "people have"} viewed this unit this week
               </div>
             )}
-            
+
             <div className="flex items-center gap-4 mb-6">
               <Badge variant="outline" className="text-base px-3 py-1">
                 {unit.size}
               </Badge>
             </div>
 
-            <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+            <p className="text-foreground text-lg mb-8 leading-relaxed">
               {unit.description}
             </p>
 
@@ -164,8 +164,8 @@ const UnitDetail = () => {
               <div className="grid grid-cols-2 gap-3">
                 {unit.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">{feature}</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -190,11 +190,11 @@ const UnitDetail = () => {
                 <CardContent className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {Object.entries(unit.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between py-2 border-b border-gray-100 last:border-b-0">
-                        <span className="font-medium capitalize text-gray-700">
+                      <div key={key} className="flex justify-between py-2 border-b border-border last:border-b-0">
+                        <span className="font-medium capitalize text-muted-foreground">
                           {key.replace(/([A-Z])/g, ' $1').toLowerCase()}:
                         </span>
-                        <span className="text-gray-900">{value}</span>
+                        <span className="text-foreground">{value}</span>
                       </div>
                     ))}
                   </div>
@@ -207,11 +207,11 @@ const UnitDetail = () => {
               <h2 className="text-2xl font-semibold mb-4">What's Included</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {generalFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                    <feature.icon className="h-6 w-6 text-green-600" />
+                  <div key={index} className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                    <feature.icon className="h-6 w-6 text-primary" />
                     <div>
-                      <h3 className="font-medium text-gray-900">{feature.title}</h3>
-                      <p className="text-sm text-gray-600">{feature.description}</p>
+                      <h3 className="font-medium text-foreground">{feature.title}</h3>
+                      <p className="text-sm text-muted-foreground">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -221,41 +221,41 @@ const UnitDetail = () => {
 
           {/* Booking Card */}
           <div className="lg:col-span-1">
-            <Card className="sticky top-8 border-gray-200 shadow-lg">
+            <Card className="sticky top-8 border-border shadow-lg">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-2xl font-bold text-gray-900">
+                    <CardTitle className="text-2xl font-bold text-foreground">
                       {unit.monthlyRate}
-                      <span className="text-base font-normal text-gray-600"> /month</span>
+                      <span className="text-base font-normal text-muted-foreground"> /month</span>
                     </CardTitle>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="border rounded-lg p-4">
-                    <div className="text-sm text-gray-600 mb-1">Available from</div>
-                    <div className="font-semibold">October 2025</div>
+                  <div className="border border-border rounded-lg p-4">
+                    <div className="text-sm text-muted-foreground mb-1">Available from</div>
+                    <div className="font-semibold text-foreground">October 2025</div>
                   </div>
-                  
-                  <Button 
-                    className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg"
+
+                  <Button
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg"
                     onClick={() => window.location.href = '/enquiry'}
                   >
                     Enquire Now
                   </Button>
-                  
-                  <div className="text-center text-sm text-gray-600">
+
+                  <div className="text-center text-sm text-muted-foreground">
                     No commitment required
                   </div>
-                  
-                  <div className="border-t pt-4">
-                    <h4 className="font-semibold mb-2">Included amenities:</h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
+
+                  <div className="border-t border-border pt-4">
+                    <h4 className="font-semibold text-foreground mb-2">Included amenities:</h4>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
                       {unit.amenities.map((amenity, index) => (
                         <li key={index} className="flex items-center gap-2">
-                          <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                          <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
                           {amenity}
                         </li>
                       ))}
@@ -269,13 +269,13 @@ const UnitDetail = () => {
       </section>
 
       {/* Similar Units */}
-      <section className="py-16 px-4 bg-gray-50 mt-16">
+      <section className="py-16 px-4 bg-muted mt-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8">Other Available Units</h2>
+          <h2 className="text-2xl font-bold mb-8 text-foreground">Other Available Units</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {units.filter(u => u.id !== unit.id).slice(0, 3).map((otherUnit) => (
-              <Card 
-                key={otherUnit.id} 
+              <Card
+                key={otherUnit.id}
                 className="cursor-pointer group hover:shadow-lg transition-shadow"
                 onClick={() => window.location.href = `/unit/${otherUnit.id}`}
               >
@@ -287,11 +287,11 @@ const UnitDetail = () => {
                   />
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="font-semibold mb-2 group-hover:underline">{otherUnit.name}</h3>
-                  <p className="text-gray-600 text-sm mb-3">{otherUnit.shortDescription}</p>
+                  <h3 className="font-semibold mb-2 group-hover:underline text-foreground">{otherUnit.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-3">{otherUnit.shortDescription}</p>
                   <div className="flex justify-between items-center">
                     <Badge variant="outline">{otherUnit.size}</Badge>
-                    <span className="font-semibold">{otherUnit.monthlyRate}/month</span>
+                    <span className="font-semibold text-foreground">{otherUnit.monthlyRate}/month</span>
                   </div>
                 </CardContent>
               </Card>

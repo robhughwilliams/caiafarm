@@ -137,10 +137,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="mb-6 space-y-2">
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>6 flexible units available October 2025</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Perfect for storage or commercial use</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Beautiful countryside setting</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#80d19d' }}></span>Flexible rental terms</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>6 flexible units available October 2025</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Perfect for storage or commercial use</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Beautiful countryside setting</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Flexible rental terms</li>
                 </ul>
                 <div className="flex justify-center">
                   <Button 
@@ -164,10 +164,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="mb-6 space-y-2">
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Waste collection and processing</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Septic Tank Installation</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Environmental compliance</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#3899ec' }}></span>Industry expertise</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Waste collection and processing</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Septic Tank Installation</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Environmental compliance</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Industry expertise</li>
                 </ul>
                 <div className="flex justify-center">
                   <Button 
@@ -191,10 +191,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="mb-6 space-y-2">
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Private Hire Dog Walking Fields</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Adventure Field: 5 acres of open space and sensory enrichment.</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Agility Field: 2 acres with kennel club standard agility equipment.</li>
-                  <li className="flex items-center text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#ff4040' }}></span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Private Hire Dog Walking Fields</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Adventure Field: 5 acres of open space and sensory enrichment.</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Agility Field: 2 acres with kennel club standard agility equipment.</li>
+                  <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</li>
                 </ul>
                 <div className="flex justify-center">
                   <Button 

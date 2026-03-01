@@ -22,7 +22,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       year: "1874",
       title: "Victorian Enterprise",
       subtitle: "Ordnance Survey – Cheshire Sheet LIII (pub. 1881)",
-      image: "/assets/0acfeba1-b3cf-42d3-9d99-653437c46ad1.png",
+      image: "/assets/0acfeba1-b3cf-42d3-b52c-4d3702d1330e.png",
       content: `Three decades later the first large-scale OS map captures the farm in full Victorian stride. New buildings flank the original farmhouse, while neat lines of trees mark the boundaries. The map labels the holding "Caeau", affirming both its Welsh roots. Produce at this time would have travelled to town markets by horse-drawn cart.`
     },
     {
@@ -43,7 +43,7 @@ The 1842 tithe survey shows Caeau Farm (Meaning The Fields in Welsh) as a compac
       year: "Today",
       title: "Stewardship & Welcome",
       subtitle: "A Living Heritage",
-      image: "/assets/Today.png",
+      image: "/assets/Today.jpg",
       content: `Over a century on, we remain a proudly family-run Farm, caring for the same hedgerows and farm buildings first set down on the 1842 tithe map. The farm is predominently arable, supplemented with some livestock. The farm is also now the proud home of Ryecroft Meadow.
 
 Our aim is simple:

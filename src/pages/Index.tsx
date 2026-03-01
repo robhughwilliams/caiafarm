@@ -1,6 +1,6 @@
 import { Building, Calendar, Users, Mail, Phone, MapPin, ArrowRight, Tractor, Leaf, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -135,22 +135,22 @@ const Index = () => {
                   Premium barn rental spaces for storage and office use
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-1">
-                <ul className="mb-6 space-y-2">
+              <CardContent className="grow">
+                <ul className="space-y-2">
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>6 flexible units available October 2025</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Perfect for storage or commercial use</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Beautiful countryside setting</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#80d19d' }}></span>Flexible rental terms</li>
                 </ul>
-                <div className="flex justify-center mt-auto">
-                  <Button
-                    className="w-48 bg-[#80d19d] text-white font-semibold hover:bg-[#5f6360]"
-                    onClick={() => window.location.href = '/units'}
-                  >
-                    View Barn Units
-                  </Button>
-                </div>
               </CardContent>
+              <CardFooter className="justify-center">
+                <Button
+                  className="w-48 bg-[#80d19d] text-white font-semibold hover:bg-[#5f6360]"
+                  onClick={() => window.location.href = '/units'}
+                >
+                  View Barn Units
+                </Button>
+              </CardFooter>
             </Card>
 
             {/* Byproduct Services */}
@@ -162,22 +162,22 @@ const Index = () => {
                   Specialised waste management and processing
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-1">
-                <ul className="mb-6 space-y-2">
+              <CardContent className="grow">
+                <ul className="space-y-2">
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Waste collection and processing</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Septic Tank Installation</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Environmental compliance</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#3899ec' }}></span>Industry expertise</li>
                 </ul>
-                <div className="flex justify-center mt-auto">
-                  <Button
-                    className="w-48 bg-[#3899ec] text-white font-semibold hover:bg-blue-800"
-                    onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
-                  >
-                    Visit Website
-                  </Button>
-                </div>
               </CardContent>
+              <CardFooter className="justify-center">
+                <Button
+                  className="w-48 bg-[#3899ec] text-white font-semibold hover:bg-blue-800"
+                  onClick={() => window.open('https://www.byproductservices.co.uk/', '_blank')}
+                >
+                  Visit Website
+                </Button>
+              </CardFooter>
             </Card>
 
             {/* Ryecroft Meadow */}
@@ -189,22 +189,22 @@ const Index = () => {
                   Premium agricultural and farming operations
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-1">
-                <ul className="mb-6 space-y-2">
+              <CardContent className="grow">
+                <ul className="space-y-2">
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Private Hire Dog Walking Fields</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Adventure Field: 5 acres of open space and sensory enrichment.</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Agility Field: 2 acres with kennel club standard agility equipment.</li>
                   <li className="flex items-start text-gray-700"><span className="inline-block w-2 h-2 rounded-full mr-3 mt-1.5 shrink-0" style={{ backgroundColor: '#ff4040' }}></span>Hillside Field: 2 acres of sloping bank, ideal for running and recall training.</li>
                 </ul>
-                <div className="flex justify-center mt-auto">
-                  <Button
-                    className="w-48 bg-[#ff4040] text-white font-semibold hover:bg-red-700"
-                    onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
-                  >
-                    Visit Website
-                  </Button>
-                </div>
               </CardContent>
+              <CardFooter className="justify-center">
+                <Button
+                  className="w-48 bg-[#ff4040] text-white font-semibold hover:bg-red-700"
+                  onClick={() => window.open('https://www.ryecroftmeadow.com/', '_blank')}
+                >
+                  Visit Website
+                </Button>
+              </CardFooter>
             </Card>
           </div>
         </div>

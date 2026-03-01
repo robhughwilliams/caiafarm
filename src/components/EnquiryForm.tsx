@@ -107,10 +107,10 @@ export default function EnquiryForm() {
   if (status === "error") return <ErrorNotice message={error} />;
 
   return (
-    <Card className="border-gray-200">
+    <Card className="border-border">
       <CardHeader>
-        <CardTitle className="text-2xl text-black">Enquiry Form</CardTitle>
-        <CardDescription className="text-gray-600">
+        <CardTitle className="text-2xl text-foreground">Enquiry Form</CardTitle>
+        <CardDescription className="text-muted-foreground">
           Tell us about your requirements - don't worry, we're good listeners (even better than cows)!
         </CardDescription>
       </CardHeader>
@@ -147,7 +147,7 @@ export default function EnquiryForm() {
           {/* Personal Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="name" className="text-black">Full Name *</Label>
+              <Label htmlFor="name" className="text-foreground">Full Name *</Label>
               <Input
                 id="name"
                 name="name"
@@ -155,12 +155,12 @@ export default function EnquiryForm() {
                 value={formState.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="border-gray-200 focus:border-gray-400"
+                className="border-border focus:border-ring"
                 autoComplete="name"
               />
             </div>
             <div>
-              <Label htmlFor="email" className="text-black">Email Address *</Label>
+              <Label htmlFor="email" className="text-foreground">Email Address *</Label>
               <Input
                 id="email"
                 name="email"
@@ -169,14 +169,14 @@ export default function EnquiryForm() {
                 value={formState.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="border-gray-200 focus:border-gray-400"
+                className="border-border focus:border-ring"
                 autoComplete="email"
               />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="phone" className="text-black">Phone Number *</Label>
+              <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -186,7 +186,7 @@ export default function EnquiryForm() {
                 value={formState.phone}
                 onChange={handleChange}
                 placeholder="01234 567890"
-                className="border-gray-200 focus:border-gray-400"
+                className="border-border focus:border-ring"
                 autoComplete="tel"
               />
             </div>
@@ -206,7 +206,7 @@ export default function EnquiryForm() {
                       target: { name: "interestedUnits", value: unit.id, type: "checkbox", checked: !!checked }
                     } as any)}
                   />
-                  <Label htmlFor={`unit-${unit.id}`} className="text-gray-700 text-sm cursor-pointer">
+                  <Label htmlFor={`unit-${unit.id}`} className="text-foreground text-sm cursor-pointer">
                     {unit.name}
                   </Label>
                 </div>
@@ -216,9 +216,9 @@ export default function EnquiryForm() {
           {/* Business Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="intendedUse" className="text-black">Intended Use *</Label>
+              <Label htmlFor="intendedUse" className="text-foreground">Intended Use *</Label>
               <Select value={formState.intendedUse} onValueChange={handleSelectChange} required name="intendedUse">
-                <SelectTrigger className="border-gray-200">
+                <SelectTrigger className="border-border">
                   <SelectValue placeholder="Select primary use" />
                 </SelectTrigger>
                 <SelectContent>
@@ -231,7 +231,7 @@ export default function EnquiryForm() {
               </Select>
             </div>
             <div>
-              <Label htmlFor="dates" className="text-black">Required from… *</Label>
+              <Label htmlFor="dates" className="text-foreground">Required from… *</Label>
               <div className="relative">
                 <Input
                   id="dates"
@@ -241,11 +241,11 @@ export default function EnquiryForm() {
                   onFocus={() => setCalendarOpen(true)}
                   onChange={handleChange}
                   placeholder="Required from…"
-                  className="border-gray-200 focus:border-gray-400 cursor-pointer"
+                  className="border-border focus:border-ring cursor-pointer"
                   readOnly
                 />
                 {calendarOpen && (
-                  <div className="absolute z-10 bg-white border rounded shadow mt-2">
+                  <div className="absolute z-10 bg-background border border-border rounded shadow mt-2">
                     <Calendar
                       mode="single"
                       selected={selectedDate}
@@ -259,7 +259,7 @@ export default function EnquiryForm() {
           </div>
           {/* Message */}
           <div>
-            <Label htmlFor="message" className="text-black">Your Message *</Label>
+            <Label htmlFor="message" className="text-foreground">Your Message *</Label>
             <Textarea
               id="message"
               name="message"
@@ -268,13 +268,13 @@ export default function EnquiryForm() {
               onChange={handleChange}
               placeholder="Tell us about your requirements, any specific questions, or just say hello! We love a good chat."
               rows={5}
-              className="border-gray-200 focus:border-gray-400"
+              className="border-border focus:border-ring"
             />
           </div>
-          <Button type="submit" size="lg" className="w-full text-white hover:opacity-90" style={{ backgroundColor: '#ff4040' }}>
+          <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
             Send Enquiry
           </Button>
-          <p className="text-sm text-gray-600 text-center">
+          <p className="text-sm text-muted-foreground text-center">
             * Required fields - we promise we're not as picky as a cow choosing grass!
           </p>
         </form>

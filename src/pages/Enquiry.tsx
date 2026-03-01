@@ -76,11 +76,11 @@ const Enquiry = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Header */}
-      <section className="text-white py-16 px-4" style={{ backgroundColor: '#80d19d' }}>
+      <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl mb-6">
@@ -105,68 +105,68 @@ const Enquiry = () => {
             <div className="space-y-6">
               
               {/* Contact Details */}
-              <Card className="border-gray-200">
+              <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-black">Contact Information</CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardTitle className="text-foreground">Contact Information</CardTitle>
+                  <CardDescription className="text-muted-foreground">
                     Other ways to reach us
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5" style={{ color: '#ff4040' }} />
+                    <Phone className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium text-black">Phone: 07729 262101</p>
-                      <p className="text-gray-600">Give us a call for a friendly chat</p>
+                      <p className="font-medium text-foreground">Phone: 07729 262101</p>
+                      <p className="text-muted-foreground">Give us a call for a friendly chat</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5" style={{ color: '#ff4040' }} />
+                    <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium text-black">Email: robert@caiafarm.co.uk</p>
-                      <p className="text-gray-600">Drop us a line anytime</p>
+                      <p className="font-medium text-foreground">Email: robert@caiafarm.co.uk</p>
+                      <p className="text-muted-foreground">Drop us a line anytime</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="h-5 w-5" style={{ color: '#ff4040' }} />
+                    <MapPin className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium text-black">Location: Gresford</p>
-                      <p className="text-gray-600">Beautiful countryside setting</p>
+                      <p className="font-medium text-foreground">Location: Gresford</p>
+                      <p className="text-muted-foreground">Beautiful countryside setting</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Response Time */}
-              <Card className="border-gray-200">
+              <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-black">Response Time</CardTitle>
+                  <CardTitle className="text-foreground">Response Time</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center space-x-3 mb-3">
-                    <Calendar className="h-5 w-5" style={{ color: '#ff4040' }} />
-                    <span className="font-medium text-black">Within 48 hours</span>
+                    <Calendar className="h-5 w-5 text-primary" />
+                    <span className="font-medium text-foreground">Within 48 hours</span>
                   </div>
-                  <p className="text-gray-600">
-                    We aim to respond to all enquiries within 48 hours. 
+                  <p className="text-muted-foreground">
+                    We aim to respond to all enquiries within 48 hours.
                     If you don't hear from us, check your spam folder!
                   </p>
                 </CardContent>
               </Card>
 
               {/* Visit Information */}
-              <Card className="border-gray-200">
+              <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-black">Want to Visit?</CardTitle>
+                  <CardTitle className="text-foreground">Want to Visit?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center space-x-3 mb-3">
-                    <Building className="h-5 w-5" style={{ color: '#ff4040' }} />
-                    <span className="font-medium text-black">Viewings Available</span>
+                    <Building className="h-5 w-5 text-primary" />
+                    <span className="font-medium text-foreground">Viewings Available</span>
                   </div>
-                  <p className="text-gray-600">
-                    We'd love to show you around! Just mention in your enquiry 
-                    that you'd like to arrange a viewing, and we'll sort out a time 
+                  <p className="text-muted-foreground">
+                    We'd love to show you around! Just mention in your enquiry
+                    that you'd like to arrange a viewing, and we'll sort out a time
                     that works for everyone.
                   </p>
                 </CardContent>

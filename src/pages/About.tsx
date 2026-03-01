@@ -52,17 +52,17 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Header */}
-      <section className="text-white py-16 px-4" style={{ backgroundColor: '#80d19d' }}>
+      <section className="py-16 px-4 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4 text-black">The History of Caia Farm</h1>
-          <p className="text-xl mb-6 text-black">
+          <h1 className="text-4xl font-bold mb-4 text-primary-foreground">The History of Caia Farm</h1>
+          <p className="text-xl mb-6 text-primary-foreground/80">
             From 1842 to today, a timeline of Caia Farm's heritage
           </p>
-          <p className="text-lg text-black">
+          <p className="text-lg text-primary-foreground/70">
             Discover how Caeau Farm has evolved through the centuries while staying true to its Welsh roots! 🚜
           </p>
         </div>
@@ -70,12 +70,12 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
 
       <div className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Historical Note */}
           <section className="mb-16">
-            <Card className="border-gray-200" style={{ backgroundColor: '#b1d3ef' }}>
+            <Card className="border-border bg-secondary">
               <CardContent className="py-8 text-center">
-                <p className="text-black font-medium text-lg">
+                <p className="text-foreground font-medium text-lg">
                   The farm is likely to date back to 1787 with the Gresford Estate map showing the farm in existence.
                 </p>
               </CardContent>
@@ -90,7 +90,7 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
                 open={openIndex === index}
                 onOpenChange={(open) => setOpenIndex(open ? index : null)}
               >
-                <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-[#ff4040] text-white rounded cursor-pointer text-left">
+                <CollapsibleTrigger className="w-full flex items-center gap-4 px-4 py-3 bg-primary text-primary-foreground rounded cursor-pointer text-left">
                   <span className="transition-transform" style={{ transform: openIndex === index ? 'rotate(90deg)' : 'rotate(0deg)' }}>
                     <ChevronRight />
                   </span>
@@ -98,26 +98,26 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
                   <span className="text-lg font-semibold">{event.title}</span>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <Card className="border-gray-200 hover:shadow-lg transition-all duration-300 mt-2">
+                  <Card className="border-border hover:shadow-lg transition-all duration-300 mt-2">
                     <CardHeader>
-                      <CardTitle className="text-black text-xl">{event.title}</CardTitle>
-                      <CardDescription className="text-gray-600 font-medium">{event.subtitle}</CardDescription>
+                      <CardTitle className="text-foreground text-xl">{event.title}</CardTitle>
+                      <CardDescription className="text-muted-foreground font-medium">{event.subtitle}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {event.image && (
                           <div className="order-2 lg:order-1">
-                            <img 
-                              src={event.image.replace('/lovable-uploads/', '/assets/')} 
+                            <img
+                              src={event.image.replace('/lovable-uploads/', '/assets/')}
                               alt={`Historical map from ${event.year}`}
-                              className="w-full h-64 object-cover rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                              className="w-full h-64 object-cover rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
                             />
                           </div>
                         )}
                         <div className={`${event.image ? 'order-1 lg:order-2' : 'col-span-full'}`}>
-                          <div className="prose prose-gray max-w-none">
+                          <div className="prose max-w-none">
                             {event.content.split('\n\n').map((paragraph, pIndex) => (
-                              <p key={pIndex} className="text-gray-800 leading-relaxed mb-4">
+                              <p key={pIndex} className="text-foreground leading-relaxed mb-4">
                                 {paragraph}
                               </p>
                             ))}
@@ -133,25 +133,25 @@ to blend modern rural enterprise with the deep-rooted heritage of Caia Farm, pre
 
           {/* Call to Action */}
           <section className="text-center mt-16">
-            <Card className="border-gray-200 text-white" style={{ backgroundColor: '#80d19d' }}>
+            <Card className="border-0 bg-primary">
               <CardContent className="py-12">
-                <h2 className="text-3xl font-bold mb-4 text-white">Be Part of Our Continuing Story</h2>
-                <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
+                <h2 className="text-3xl font-bold mb-4 text-primary-foreground">Be Part of Our Continuing Story</h2>
+                <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/80">
                   From Victorian heritage to modern diversified farming,
                   your enterprise could be the next chapter in Caia Farm's evolving story!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-white hover:bg-gray-100 text-[#507e37] font-semibold"
+                  <Button
+                    size="lg"
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold"
                     onClick={() => window.location.href = '/units'}
                   >
                     Explore Our Businesses
                   </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-white text-[#507e37] bg-white hover:bg-gray-100 font-semibold"
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary-foreground text-primary bg-primary-foreground hover:bg-primary-foreground/90 font-semibold"
                     onClick={() => window.location.href = '/enquiry'}
                   >
                     Get in Touch

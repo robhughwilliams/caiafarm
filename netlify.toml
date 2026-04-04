@@ -1,0 +1,31 @@
+[build]
+  publish = "frontend/homeowner"
+  # No build command — plain HTML, no compilation step
+
+# ── Homeowner PWA (SPA) ────────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/app/*"
+  to     = "/index.html"
+  status = 200
+  force  = true
+
+# ── Installer portal (SPA) ────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/installer/*"
+  to     = "/installer/index.html"
+  status = 200
+  force  = true
+
+# ── Certificate verify (SPA) ─────────────────────────────────────────────────
+[[redirects]]
+  from   = "/verify/*"
+  to     = "/verify/index.html"
+  status = 200
+  force  = true
+
+# ── Root → homeowner PWA ──────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+  force  = true
